@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <component :is="layout"></component>
   </div>
 </template>
 
 <script>
+// vuetify 를 쓰기위해서는 Vapp, vuietify 이썽야함
+import LayoutDefault from '@/views/layout/LayoutDefault'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    LayoutDefault
+  },
+  computed: {
+    layout () {
+      return this.$store.state.layout
+    }
+  },
+  methods: {
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style :lang="css">
+  @import "assets/css/main.css";
 </style>

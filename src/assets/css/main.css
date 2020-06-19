@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #f3efec;
+  color: #000000;
+}
+
+.container .content {
+  position: relative;
+}
+
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
